@@ -11,6 +11,12 @@ namespace Library
         public string Author;
         public string ISBN;
 
+        public Book(string bookTitle, string bookAuthor, string bookISBN)
+        {
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
         public void DisplayInfo()
         {
             Console.WriteLine($"Title: {Title}");
