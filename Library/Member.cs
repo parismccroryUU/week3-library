@@ -40,5 +40,13 @@ namespace Library
             this.address = address;
             this.phone = phone;
         }
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Member ID: {memberID}");
+            Console.WriteLine($"Member Name: {name}");
+            Console.WriteLine($"Member Address: {address}");
+            Console.WriteLine($"Member Phone No: {phone}");
+            Console.WriteLine();
+        }   
     }
 }
