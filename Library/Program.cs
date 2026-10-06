@@ -12,7 +12,7 @@ class Program
         book1.DisplayInfo();
         //validation test
         Console.WriteLine("Validation test for empty ISBN and invalid author name:");
-        Book book3 = new Book("Java for beginners", "55667778", 0);
+        Book book3 = new Book("Java for beginners", "55667778", 0972162);
         book3.DisplayInfo();
 
         // create a new instance of the Member class
