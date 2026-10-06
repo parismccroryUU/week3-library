@@ -7,11 +7,12 @@ namespace Library
 {
     internal class Member
     {
+        //Private fields
         private int memberID;
         private string name;
         private string address;
         private int phone;
-
+        // Public properties
         public int MemberID
         {
             get { return memberID; }
@@ -38,28 +39,29 @@ namespace Library
                 }
                 else
                 {
-                    Console.WriteLine("Error: Member name cannot be blank or contain numbers")
+                    Console.WriteLine("Error: Member name cannot be blank or contain numbers");
                 }
             }
         }
         public string Address
         {
             get { return address; }  
-            set { address = value; } 
+            set { address = value; }
         }
         public int Phone
         {
             get { return phone; }  // get method
             set { phone = value; } // set method
         }
-
-        public Member(int memberID, string name, string address, int phone)
+        //Constructor
+        public Member(int LmemberID, string Mname, string Maddress, int Mphone)
         {
-            this.memberID = memberID; // Assigns the camelCase parameter to the PascalCase property
-            this.name = name;
-            this.address = address;
-            this.phone = phone;
+            this.memberID = LmemberID; // Assigns the camelCase parameter to the PascalCase property
+            this.name = Mname;
+            this.address = Maddress;
+            this.phone = Mphone;
         }
+        //Methods
         public void DisplayInfo()
         {
             Console.WriteLine($"Member ID: {memberID}");

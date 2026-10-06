@@ -27,7 +27,8 @@ class Program
         member1.DisplayInfo();
 
         // Testing the validation logic with invalid data
-        Member invalidMember = new Member(-5, "Rob0t C0p", "50 Main Street", 078112233);
+        Console.WriteLine("Validation test for invalid member ID:");
+        Member invalidMember = new Member(-5, "Rob0t C0p", "50 Main Street", 078112233); // Ccrashes on startup
         invalidMember.DisplayInfo();
     }
 }
