@@ -15,17 +15,37 @@ namespace Library
         public int MemberID
         {
             get { return memberID; }
-            set { memberID = value; } // Private setter makes read-only
+            private set // Private setter makes read-only
+            {
+                if (value > 0)
+                {
+                    MemberID = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: Member ID must be greater than 0.");
+                }
+            } 
         }
         public string Name
         {
-            get { return name; }  // get method
-            set { name = value; } // set method
+            get { return name; }
+            set
+            {
+                if (!value.Any(char.IsDigit) && value != " ")
+                {
+                    name = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: Member name cannot be blank or contain numbers")
+                }
+            }
         }
         public string Address
         {
-            get { return address; }  // get method
-            set { address = value; } // set method
+            get { return address; }  
+            set { address = value; } 
         }
         public int Phone
         {
